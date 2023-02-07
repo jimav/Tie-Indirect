@@ -8,7 +8,7 @@
 
 =head1 NAME
 
-Tie::Indirect::* -- tie variables to access data located at run-time.
+Tie::Indirect::* -- tie variables to access data located via callbacks
 
 =head1 DESCRIPTION
 
