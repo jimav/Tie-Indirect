@@ -45,7 +45,11 @@ Jim Avera (jim.avera AT gmail) / Public Domain or CC0
 =cut
 
 #---------------------------------------------------------------------#
-package Tie::Indirect::Scalar;
+package Tie::Indirect; # just so Dist::Zilla can add $VERSION
+
+
+package 
+  Tie::Indirect::Scalar;
 use Carp;
 
 sub TIESCALAR {
@@ -64,7 +68,8 @@ sub STORE   { ${ $_[0]->_getref(1) } = $_[1] }
 #sub DESTROY { eval { undef ${ $_[0]->_getref(1) } }; }
 
 #---------------------------------------------------------------------#
-package Tie::Indirect::Array;
+package 
+  Tie::Indirect::Array;
 use Carp;
 
 sub TIEARRAY {
@@ -100,7 +105,8 @@ sub SPLICE
 sub EXTEND    { }
 
 #---------------------------------------------------------------------#
-package Tie::Indirect::Hash;
+package 
+  Tie::Indirect::Hash;
 require Tie::Hash;
 use Carp;
 
